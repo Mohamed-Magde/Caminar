@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins",
+    serif;
+  background-color: $light-grey;
+  color: $seconadry;
+  overflow-x: hidden;
+
+  text-align: center;
+
+  &:after {
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    -moz-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    -webkit-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    -ms-transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    content: '';
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 6em;
+  width: 75%;
+  padding-bottom: 4em;
+}
+
+
+
+/// 
+.heading-1 {
+  color: $light-grey;
+  font-size: 4rem;
+  font-weight: bold;
+
+  span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $seconadry;
+  }
+}
+
+
+.heading-2 {
+  font-size: 2rem;
+  color: #000;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 4em;
+    height: 1px;
+    background-color: $seconadry;
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+}

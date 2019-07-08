@@ -1,0 +1,31 @@
+.section-2 {
+  background-color: $primary;
+  padding-bottom: 4em;
+
+  &-text {
+    background-color: $black;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    .heading-2 {
+      color: #fff;
+      letter-spacing: 5px;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    figure {
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .container {
+    width: 90%;
+  }
+}
